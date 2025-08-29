@@ -1,0 +1,135 @@
+{
+  "categories": {
+    "marketing": {
+      "name": "Marketing & Vendas",
+      "icon": "📈",
+      "templates": [
+        {
+          "id": "copy_vendas",
+          "name": "Copy de Vendas",
+          "papel": "Copywriter especialista em vendas",
+          "contexto": "Preciso criar uma copy persuasiva para meu produto/serviço",
+          "tarefa": "criar uma copy de vendas irresistível que converta visitantes em clientes",
+          "formato": "estrutura AIDA (Atenção, Interesse, Desejo, Ação) com headlines, subheadlines e call-to-action",
+          "tom": "persuasivo, confiável e orientado a resultados",
+          "evite": "promessas irreais, linguagem muito técnica e textos muito longos"
+        },
+        {
+          "id": "email_marketing",
+          "name": "E-mail Marketing",
+          "papel": "Especialista em e-mail marketing",
+          "contexto": "Quero criar uma campanha de e-mail para engajar minha lista",
+          "tarefa": "criar uma sequência de e-mails que eduque e converta leads",
+          "formato": "série de 5 e-mails com assuntos chamativos e conteúdo valioso",
+          "tom": "amigável, educativo e não invasivo",
+          "evite": "spam, linguagem muito promocional e e-mails muito longos"
+        }
+      ]
+    },
+    "codigo": {
+      "name": "Programação",
+      "icon": "💻",
+      "templates": [
+        {
+          "id": "debug_codigo",
+          "name": "Debug de Código",
+          "papel": "Desenvolvedor sênior especialista em debugging",
+          "contexto": "Tenho um bug no meu código que não consigo resolver",
+          "tarefa": "analisar o código, identificar o problema e fornecer a solução",
+          "formato": "explicação do problema + código corrigido + explicação da solução",
+          "tom": "técnico mas didático, claro e objetivo",
+          "evite": "soluções muito complexas, bibliotecas desnecessárias e código não otimizado"
+        },
+        {
+          "id": "review_codigo",
+          "name": "Review de Código",
+          "papel": "Arquiteto de software sênior",
+          "contexto": "Preciso de uma revisão completa do meu código",
+          "tarefa": "fazer uma análise detalhada do código focando em qualidade, performance e boas práticas",
+          "formato": "lista de pontos de melhoria com exemplos de código e sugestões",
+          "tom": "construtivo, educativo e profissional",
+          "evite": "críticas destrutivas, sugestões muito avançadas para o contexto e mudanças desnecessárias"
+        }
+      ]
+    },
+    "educacao": {
+      "name": "Educação",
+      "icon": "🎓",
+      "templates": [
+        {
+          "id": "explicar_conceito",
+          "name": "Explicar Conceito",
+          "papel": "Professor especialista na área",
+          "contexto": "Preciso entender um conceito complexo",
+          "tarefa": "explicar o conceito de forma clara e didática com exemplos práticos",
+          "formato": "explicação estruturada com definição, exemplos e exercícios",
+          "tom": "didático, paciente e encorajador",
+          "evite": "linguagem muito técnica, exemplos muito abstratos e explicações muito longas"
+        },
+        {
+          "id": "plano_estudos",
+          "name": "Plano de Estudos",
+          "papel": "Mentor educacional especializado",
+          "contexto": "Quero criar um plano de estudos eficiente",
+          "tarefa": "criar um cronograma de estudos personalizado e realista",
+          "formato": "cronograma semanal com objetivos, recursos e marcos de progresso",
+          "tom": "motivador, realista e bem estruturado",
+          "evite": "cronogramas muito agressivos, falta de flexibilidade e objetivos vagos"
+        }
+      ]
+    },
+    "criativo": {
+      "name": "Criatividade",
+      "icon": "🎨",
+      "templates": [
+        {
+          "id": "brainstorm_ideias",
+          "name": "Brainstorm de Ideias",
+          "papel": "Consultor criativo e estrategista de inovação",
+          "contexto": "Preciso de ideias criativas para meu projeto",
+          "tarefa": "gerar 20 ideias inovadoras e viáveis para o projeto",
+          "formato": "lista numerada com descrição breve e potencial de cada ideia",
+          "tom": "criativo, inspirador e prático",
+          "evite": "ideias muito óbvias, soluções muito complexas e falta de viabilidade"
+        },
+        {
+          "id": "storytelling",
+          "name": "Storytelling",
+          "papel": "Especialista em narrativa e storytelling",
+          "contexto": "Quero contar uma história envolvente",
+          "tarefa": "criar uma narrativa cativante que conecte com a audiência",
+          "formato": "estrutura de história com início, meio e fim bem definidos",
+          "tom": "envolvente, emocional e memorável",
+          "evite": "histórias muito longas, falta de conflito e final sem impacto"
+        }
+      ]
+    },
+    "negocios": {
+      "name": "Negócios",
+      "icon": "💼",
+      "templates": [
+        {
+          "id": "plano_negocios",
+          "name": "Plano de Negócios",
+          "papel": "Consultor empresarial sênior",
+          "contexto": "Estou desenvolvendo um novo negócio",
+          "tarefa": "criar um plano de negócios estruturado e viável",
+          "formato": "documento executivo com análise de mercado, modelo de negócio e projeções",
+          "tom": "profissional, analítico e convincente",
+          "evite": "projeções irreais, falta de análise de concorrência e modelo de receita vago"
+        },
+        {
+          "id": "analise_mercado",
+          "name": "Análise de Mercado",
+          "papel": "Analista de mercado especializado",
+          "contexto": "Preciso entender melhor meu mercado-alvo",
+          "tarefa": "fazer uma análise completa do mercado e identificar oportunidades",
+          "formato": "relatório com dados de mercado, perfil do cliente e estratégias recomendadas",
+          "tom": "analítico, baseado em dados e estratégico",
+          "evite": "dados desatualizados, análise superficial e falta de recomendações práticas"
+        }
+      ]
+    }
+  }
+}
+

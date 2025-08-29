@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prompt Perfeito Pro - Gerador Avançado de Prompts</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Effects -->
+  <div class="bg-effects">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="floating-particles"></div>
+  </div>
+
+  <div class="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-icon">✨</div>
+          <div>
+            <h1 class="app-title">Prompt Perfeito Pro</h1>
+            <p class="app-subtitle">Gerador avançado de prompts para IA</p>
+          </div>
+        </div>
+        
+        <div class="header-controls">
+          <button id="helpBtn" class="btn btn-ghost" title="Ajuda">
+            <span class="btn-icon">❓</span>
+            Ajuda
+          </button>
+        </div>
+      </div>
+    </header>
+
+    
+    <!-- Main Form -->
+    <section class="form-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-icon">⚡</span>
+          Criar Prompt Personalizado
+        </h2>
+        <div class="form-controls">
+          <button id="clearForm" class="btn btn-ghost">
+            <span class="btn-icon">🗑️</span>
+            Limpar
+          </button>
+          <button id="randomize" class="btn btn-outline">
+            <span class="btn-icon">🎲</span>
+            Aleatório
+          </button>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field-group">
+          <label for="papel" class="field-label">
+            <span class="label-icon">👤</span>
+            Papel desejado
+            <span class="field-counter" id="papelCounter">0/100</span>
+          </label>
+          <input id="papel" type="text" class="field-input" 
+                 placeholder="Ex.: Professor de inglês, Consultor de negócios, Dev sênior"
+                 maxlength="100"/>
+          <div class="field-suggestions" id="papelSuggestions"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="contexto" class="field-label">
+            <span class="label-icon">🎯</span>
+            Contexto / Situação
+            <span class="field-counter" id="contextoCounter">0/150</span>
+          </label>
+          <input id="contexto" type="text" class="field-input"
+                 placeholder="Ex.: Estou começando no inglês, Criando um app para fotógrafos"
+                 maxlength="150"/>
+          <div class="field-suggestions" id="contextoSuggestions"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="tarefa" class="field-label">
+            <span class="label-icon">⚡</span>
+            Tarefa exata
+            <span class="field-counter" id="tarefaCounter">0/200</span>
+          </label>
+          <input id="tarefa" type="text" class="field-input"
+                 placeholder="Ex.: Criar 10 ideias, Escrever um código, Explicar em 5 passos"
+                 maxlength="200"/>
+          <div class="field-suggestions" id="tarefaSuggestions"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="formato" class="field-label">
+            <span class="label-icon">📋</span>
+            Formato da resposta
+            <span class="field-counter" id="formatoCounter">0/100</span>
+          </label>
+          <input id="formato" type="text" class="field-input"
+                 placeholder="Ex.: Lista numerada, Tabela, Código pronto"
+                 maxlength="100"/>
+          <div class="field-suggestions" id="formatoSuggestions"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="tom" class="field-label">
+            <span class="label-icon">🎭</span>
+            Tom / Estilo
+            <span class="field-counter" id="tomCounter">0/100</span>
+          </label>
+          <input id="tom" type="text" class="field-input"
+                 placeholder="Ex.: Simples e amigável, Profissional, Direto ao ponto"
+                 maxlength="100"/>
+          <div class="field-suggestions" id="tomSuggestions"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="evite" class="field-label">
+            <span class="label-icon">🚫</span>
+            Evite (limites)
+            <span class="field-counter" id="eviteCounter">0/150</span>
+          </label>
+          <input id="evite" type="text" class="field-input"
+                 placeholder="Ex.: Evite jargões, Evite bibliotecas externas, Evite textos longos"
+                 maxlength="150"/>
+          <div class="field-suggestions" id="eviteSuggestions"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-icon">👁️</span>
+          Pré-visualização
+        </h2>
+        <div class="preview-controls">
+          <button id="copyPrompt" class="btn btn-primary">
+            <span class="btn-icon">📋</span>
+            Copiar Prompt
+          </button>
+          <button id="savePrompt" class="btn btn-secondary">
+            <span class="btn-icon">💾</span>
+            Salvar
+          </button>
+          <button id="sharePrompt" class="btn btn-outline">
+            <span class="btn-icon">🔗</span>
+            Compartilhar
+          </button>
+        </div>
+      </div>
+      
+      <div class="preview-container">
+        <div id="promptPreview" class="prompt-preview">
+          <div class="preview-placeholder">
+            <span class="placeholder-icon">✨</span>
+            <p>Preencha os campos acima para ver a pré-visualização do seu prompt</p>
+          </div>
+        </div>
+        <div class="preview-stats">
+          <div class="stat-item">
+            <span class="stat-label">Caracteres:</span>
+            <span id="charCount" class="stat-value">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Palavras:</span>
+            <span id="wordCount" class="stat-value">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Qualidade:</span>
+            <span id="qualityScore" class="stat-value quality-good">Boa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>Desenvolvido por <strong>Thiago Luiz</strong></p>
+          <p class="footer-tip">
+            💡 Dica: Use <kbd>Ctrl</kbd> + <kbd>Enter</kbd> para copiar rapidamente
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <div id="helpModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Como usar o Prompt Perfeito Pro</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="help-content">
+          <div class="help-section">
+            <h4>🚀 Começando</h4>
+            <p>Escolha um template pronto ou crie seu prompt personalizado preenchendo os campos.</p>
+          </div>
+          <div class="help-section">
+            <h4>📋 Templates</h4>
+            <p>Use templates pré-definidos para diferentes situações: marketing, programação, educação e mais.</p>
+          </div>
+          <div class="help-section">
+            <h4>⚡ Atalhos</h4>
+            <ul>
+              <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> - Copiar prompt</li>
+              <li><kbd>Ctrl</kbd> + <kbd>L</kbd> - Limpar campos</li>
+              <li><kbd>Esc</kbd> - Fechar modais</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Status Indicator -->
+  <div id="statusIndicator" class="status-indicator">
+    <span class="status-text">Pronto</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
